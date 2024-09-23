@@ -1,0 +1,26 @@
+# From client to Server
+
+client
+msg = 'hii user';
+socket.emit('hello-event', msg);
+
+Server
+io.on('connection', (socket) => {
+    socket.on('hello-event', (arg) => {
+        console.log(`from client`, arg); // hi user
+    })
+})
+
+
+# From Server to client
+
+Server
+io.on('connection', () => {
+    socket.emit('hello', 'world');
+});
+
+client
+io.on('hello' (arg) => {
+    console.log('receive', arg);
+});
+

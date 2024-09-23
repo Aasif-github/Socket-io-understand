@@ -1,0 +1,20 @@
+{
+  "name": "socket-chat-app",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "chat-app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "author": "asif",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0",
+    "nodemon": "^3.1.7",
+    "socket.io": "^4.7.2",
+    "socket.io-client": "^4.8.0"
+  }
+}
