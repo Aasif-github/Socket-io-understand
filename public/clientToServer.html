@@ -14,9 +14,15 @@
     <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
     <!-- <script src="/socket.io/socket.io.js"></script>  -->
 </body>
-
+<!-- 
+Go to http://localhost:3003/clientToServer.html
+Then send a message from the client to the server
+ -->
 <script>        
     const socket = io();
+    // const socket = io('http://localhost:3003'); // or the correct server URL
+    
+    console.log(`socket`,socket);
 
     const form = document.getElementById('form');
     const input = document.getElementById('input');

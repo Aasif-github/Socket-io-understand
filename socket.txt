@@ -1,4 +1,9 @@
+Resources:
+https://socket.io/docs/v4/tutorial/step-4
+
 # From client to Server
+Go to http://localhost:3003/clientToServer.html
+Then send a message from the client to the server
 
 client
 msg = 'hii user';
@@ -13,7 +18,7 @@ io.on('connection', (socket) => {
 
 
 # From Server to client
-
+node clientToServer.js
 Server
 io.on('connection', () => {
     socket.emit('hello', 'world');

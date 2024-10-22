@@ -15,14 +15,13 @@ const io = new Server(server, {
 //   res.send('Socket.IO Server Running');
 // });
 
-
 // Serve static files (e.g., HTML, CSS, JS)
 app.use(express.static("public"));
 
 // Socket connection event
 io.on('connection', (socket) => {
   console.log('a user connected:', socket.id);
-    
+//   console.log('step 2', socket.handshake);
   //2. Listen for messages from the client
   socket.on("chat message", (message) => {
     console.log('step 2');
